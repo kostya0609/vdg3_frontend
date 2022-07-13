@@ -1,0 +1,371 @@
+/* GENERAL */
+body{
+    overflow-x : hidden;
+}
+#workarea {
+    /*overflow-y: unset!important;*/
+}
+/* GENERAL */
+
+/* SHOW FIELDS MODAL */
+.vdg_showFieldsModal > .el-dialog__header{
+    padding: 15px 10px 0 10px;
+}
+.vdg_showFieldsModal > .el-dialog__header > .el-dialog__title{
+    line-height: 24px;
+}
+.vdg_showFieldsModal > .el-dialog__body{
+    padding: 5px 10px;
+}
+.vdg_showFieldsModal_scroll{
+    height: 400px;
+}
+.vdg_showFieldsModal_item{
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+.vdg_showFieldsModal_item > span:first-child{
+    top: 5px;
+}
+.vdg_showFieldsModal_item > span:last-child{
+    position: relative;
+    top: 3px;
+}
+/* SHOW FIELDS MODAL */
+
+/* GRID HEADER */
+.vdg_rowHeader{
+    display: grid;
+    clip-path: inset(0 15px 0 0);
+    overflow: hidden;
+    position: sticky;
+    top : 0;
+    z-index: 10;
+}
+.vdg_rowHeader_columnHeader{
+    position: relative;
+    display: grid;
+    max-width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    height: 100%;
+    cursor: pointer;
+}
+.vdg_rowHeader_columnHeader > span{
+    overflow: hidden;
+    display: inline-block;
+    text-align: left;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: .5px;
+    line-height: 12px;
+}
+.vdg_rowHeader_columnHeader.icon{
+    justify-content: center;
+}
+.vdg_rowHeader_columnHeader.icon i{
+    cursor: pointer;
+}
+.vdg_rowHeader_columnHeader_handle{
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    left: calc(100% - 20px);
+    display: block;
+    cursor: col-resize;
+    opacity: 0;
+    transition: .5s;
+}
+.vdg_rowHeader_columnHeader_handle:before{
+    position: absolute;
+    top: 15%;
+    right: 0;
+    width: 2px;
+    height: 70%;
+    content: '';
+}
+.vdg_rowHeader_columnHeader:hover .vdg_rowHeader_columnHeader_handle{
+    opacity: 1;
+}
+.vdg_rowHeader_dragActiveElement{
+    position: absolute;
+    display: block;
+    height: auto;
+    transform: rotate(-3deg);
+    z-index: 10;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 12px;
+    opacity: 0.6;
+}
+
+.vdg_rowHeader_iconSort{
+    /*margin-left: 5px;*/
+
+}
+/* GRID HEADER */
+
+/* GRID SCROLLBAR */
+.vdg_rowHeader_scrollbar{
+    height: 20px;
+    position: sticky;
+    z-index: 10;
+    top : 28px;
+}
+.vdg_rowHeader_scrollbar > .is-horizontal{
+    height: 10px;
+    top: 0;
+}
+.vdg_rowHeader_scrollbar > .is-horizontal > el-scrollbar__thumb{
+    height: 10px;
+    opacity: 1;
+}
+/* GRID SCROLLBAR */
+
+/* GRID CONTENT */
+.vdg_contentWrapper{
+    position: relative;
+}
+.vdg_contentWrapper_rowContent{
+    display: grid;
+    z-index: 1;
+    position: relative;
+    clip-path: inset(0 15px 0 0);
+}
+.vdg_contentWrapper_columnContent{
+    display: grid;
+    max-width: 100%;
+    padding: 5px;
+    position: relative;
+}
+.vdg_contentWrapper_columnContent > *{
+    position: sticky;
+    top: 43px;
+    align-self: start;
+}
+.vdg_contentWrapper_columnContent.icon{
+    justify-content: center;
+}
+.vdg_contentWrapper_columnContent.icon i{
+    cursor: pointer;
+}
+/* GRID CONTENT */
+
+/* CONTEXT MENU */
+.vdg_contextMenuWrapper{
+    overflow: hidden;
+    left: 0px;
+    top: 0px;
+    max-width: 20%;
+    padding: 0px 15px;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 10;
+}
+.vdg_contextMenuWrapper_item{
+    padding: 10px;
+    cursor: pointer;
+    white-space : nowrap;
+}
+.vdg_contextMenuWrapper_item:last-child{
+    border-bottom: 0;
+}
+/* CONTEXT MENU */
+
+/* PAGINATION */
+.vdg_paginationWrapper{
+    display: flex;
+}
+.vdg_paginationWrapper > .el-pagination{
+    display: flex;
+    margin-left: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+/* PAGINATION */
+
+/* FILTER */
+.vdg_filterWrapper{
+    position: relative;
+    display: flex;
+    flex: 1 1 500px;
+}
+.vdg_labelFilterWrapper{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.vdg_labelFilterWrapper > div:last-child{
+    display: flex;
+    flex : 1 1 500px;
+    height: 40px;
+}
+.vdg_inputFilter {
+    display: flex;
+    width: auto;
+    height: 40px;
+}
+.vdg_inputFilter input {
+    border: none;
+}
+.vdg_inputFilter > .el-input__inner{
+    height: 38px;
+}
+
+
+span.vdg_valueFilter {
+    float: left;
+    height: 22px;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 4px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 280px;
+}
+
+.vdg_filterContentBlock{
+    overflow: hidden;
+    left: 0;
+    top: 45px;
+    padding: 10px;
+    position: absolute;
+    width: 580px;
+    max-height: 500px;
+    z-index: 11;
+    overflow-y: auto;
+    display: flex;
+    box-sizing: border-box;
+    display: flex;
+}
+.vdg_filterContentBlockWithProfiles{
+    width: 900px;
+}
+
+.vdg_profileWrapper{
+    width: 300px;
+    margin-right: 20px
+}
+.vdg_profileRow_label{
+    text-align: left;
+    line-height: 40px;
+    padding: 0 12px 0 0;
+    display: inline-block;
+    width: 100%;
+}
+.vdg_profileRow_fields{
+    display: flex;
+    margin-bottom: 10px;
+}
+.vdg_profileRow_element{
+    white-space: pre-line;
+    margin-top: 5px;
+    display: flex;
+    flex: 1 100%;
+    padding-right: 10px;
+    min-width: 160px;
+}
+.vdg_profileRow_elementRemove{
+    display: flex;
+    margin-top: 5px;
+    flex: 1 1 40px;
+    padding: 12px;
+}
+
+.vdg_profileRow_elementUpdate{
+    display: flex;
+    margin-top: 5px;
+    flex: 1 1 40px;
+    padding: 12px;
+}
+
+.vdg_profileRow_addRow,
+.vdg_profileRow_default{
+    display: flex;
+    flex: 100%;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.vdg_profileRow_addRow_input{
+    display: flex;
+    flex: 1 100%;
+    min-width: 160px;
+    margin-top: 5px;
+}
+
+.vdg_filterMainContainer{
+    width: 580px;
+    padding-right: 10px;
+}
+.vdg_filterRow_label{
+    text-align: left;
+    line-height: 40px;
+    padding: 0 12px 0 0;
+}
+.vdg_filterRow_fields{
+    display: flex;
+    margin-bottom: 10px;
+}
+.vdg_filterRow_changeFieldsNumber{
+    display: flex;
+    flex: 1 1 160px;
+    padding-right: 10px;
+    min-width: 160px;
+}
+.vdg_filterRow_changeValue{
+    display: flex;
+    flex: 1 1 100%;
+    padding-right: 10px;
+}
+.vdg_filterRow_hideFields{
+    display: flex;
+    flex: 1 1 40px;
+    padding: 12px;
+}
+.vdg_filterRow_changeFieldsList{
+    display: flex;
+    flex: 1  100%;
+    padding-right: 10px;
+    min-width: 160px;
+}
+.vdg_filterRow_changeFieldsList .select-trigger{
+    width: 100%;
+}
+.vdg_filterRow_clearFilter{
+    margin-left: auto;
+}
+.vdg_filterRow_submitFilter{
+    margin-left: auto;
+}
+.vdg_filterDropMenuWrapper{
+    overflow: hidden;
+    left: 0px;
+    top: 0px;
+    max-width: 20%;
+    padding: 0px 15px;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 15;
+}
+.vdg_filterDropMenuWrapper_item{
+    padding: 10px;
+    cursor: pointer;
+    white-space : nowrap;
+}
+.vdg_filterDropMenuWrapper_item:last-child{
+    border-bottom: 0;
+}
+
+.el-input.vdg_inputFilter .el-input__wrapper{
+    box-shadow: none;
+}
+
+
+/* FILTER */
